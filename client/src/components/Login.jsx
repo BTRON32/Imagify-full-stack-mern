@@ -28,6 +28,7 @@ const Login = () => {
                         setUser(data.user)//get user from context, user from the response
                         localStorage.setItem('token',data.token)//store token in browser's localstorage, key name="token", and provide token we are getting from response
                         setShowLogin(false)//to hide login form(login form will be hidden now) 
+                        toast.success("Logged in successfully!")
                     }else{
                         toast.error(data.message)
                     }
@@ -40,6 +41,7 @@ const Login = () => {
                         setUser(data.user)//set user
                         localStorage.setItem('token',data.token)//set token in localstorage
                         setShowLogin(false)//set this to false to hide the registration to false
+                         toast.success("Account created successfully!")
                     }else{
                         toast.error(data.message)//displayed in notification
                     }
