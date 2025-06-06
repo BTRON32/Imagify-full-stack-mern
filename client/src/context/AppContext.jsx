@@ -58,6 +58,7 @@ const AppContextProvider=(props)=>{
         localStorage.removeItem('token')//to remove token from browser localstorage, it will remove item with keyname ="token"
         setToken('')//set token to ""
         setUser(null)//set user to null
+         toast.success("Logged out successfully!")
     }
 
     useEffect(()=>{
